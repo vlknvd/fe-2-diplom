@@ -1,0 +1,173 @@
+.time-body.none { 
+    display: none;
+}
+
+.filter-time {
+    padding: 24px 35px 0 32px ;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.filter-time.back {
+    border-bottom: none;
+}
+
+.time-head {
+    margin-bottom: 22px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.time-img {
+    width: 32px;
+    height: 26px;
+    margin-right: 12px;
+}
+
+.time-img.to {
+    background-image: url(/public/img/widget-filter/Subtract.png)
+}
+
+.time-img.back {
+    background-image: url(/public/img/widget-filter/Subtract2.png)    
+}
+
+.time-title {
+    margin-right: auto;
+
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+}
+
+.time-title.title-back {
+    margin-right: 106px;
+}
+
+.time-button {
+    width: 20px;
+    height: 20px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+} 
+
+.time-button.show {
+    background-image: url(/public/img/widget-filter/show.png)
+}
+
+.time-button.hide {
+    background-image: url(/public/img/widget-filter/hide.png)
+}
+
+.time-body.time-leave {
+    margin-bottom: 46px;
+}
+
+.time-subtitle {
+    margin-bottom: 15px;
+
+    font-weight: 400;
+    font-size: 24px;
+    color: #e5e5e5;
+}
+
+.time-subtitle.subtitle-arrival {
+    text-align: right;
+}
+
+.range-number {
+    font-weight: 400;
+    font-size: 16px;
+    color: #e5e5e5;
+}
+
+.range-input-out, .range-input-in {
+    width: 295px;
+    height: 20px;
+
+    position: absolute;
+
+    background: transparent;
+    appearance: none;
+    border-radius: 8px;
+    pointer-events: none;
+    z-index: 1;
+}
+  
+.range-input-in {
+    transform: rotate(0deg);
+}
+
+.range-input-in::-webkit-slider-thumb, .range-input-out::-webkit-slider-thumb {
+    -webkit-appearance: none;
+
+    height: 24px;
+    width: 24px;
+
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.range-input-in::-moz-range-thumb, .range-input-out::-moz-range-thumb {
+    height: 24px;
+    width: 24px;
+
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.range-input {
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+
+    width: 295px;
+    height: 20px;
+
+    border: 1px solid #C4C4C4;
+    border-radius: 9px;
+    background-color: transparent;
+}
+
+.range-line {
+    position: relative;
+    z-index: 0;
+    
+    width: 280px;
+    height: 20px;
+}
+
+.range-line-body {
+    position: absolute;
+    top: -1px;
+    z-index: 1;
+    
+    height: 20px;
+    
+    background-color: #FFA800;
+}
+
+.range-number {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+}
+
+.time-body.time-arrival {
+    margin-bottom: 30px;
+}

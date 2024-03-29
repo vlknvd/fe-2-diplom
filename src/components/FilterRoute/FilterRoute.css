@@ -1,0 +1,75 @@
+.filter-route {
+    display: flex;
+    width: 100%;
+    margin-bottom: 47px;
+}
+
+.route-found {
+    display: flex;
+    margin-right: auto;
+}
+
+.route-sort {
+    position: relative;
+}
+
+.route-found > p,
+.route-found > span,
+.route-sort > p,
+.route-show > p,
+.route-show > span {
+    margin-right: 5px;
+    
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #928F94;
+}
+  
+.sort-selected, .route-show > span.sort-selected {
+    margin-left: 5px;
+    
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3E3C41;
+    cursor: pointer;
+}
+
+.sort.none {
+    display: none;
+}
+
+.sort {
+    position: absolute;
+    left: 142px;
+    top: 0;
+    
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3E3C41;
+    cursor: pointer;
+    
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #f7f5f9;
+}
+
+.select {
+    padding: 5px 13px 15px 7px;
+    
+    border-bottom: 1px solid #e5e5e5;;
+}
+
+.select-duration {
+    border-bottom: none;
+}
+  
+.route-show {
+    display: flex;
+    margin-left: 68px;
+}
+
+.route-show > span {
+    cursor: pointer;
+}

@@ -1,0 +1,55 @@
+.change-pages {
+    margin-top: 142px;
+    margin-bottom: 193px;
+}
+
+.pages {
+    display: flex;
+}
+  
+.pages-previous, .page, .pages-next {
+    width: 85px;
+    height: 75px;
+    margin-left: 35px;
+
+    border: 2px solid #C4C4C4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.pages-previous {
+    margin-left: auto;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/public/img/train-card/prevpage.png);
+}
+  
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #928F94;
+}
+  
+.choice-page {
+    color: #FFA800;
+    border: 2px solid #FFA800;
+}
+  
+.page:hover {
+    background-color: #FFA800;
+    color: #FFFFFF;
+    transition: color 200ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
+}
+  
+.pages-next {
+    background-image: url(/public/img/train-card/nextpage.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}

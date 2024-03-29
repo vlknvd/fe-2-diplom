@@ -1,0 +1,44 @@
+.main.payment {
+    padding: 96px 256px 0 259px;
+   
+    display: flex;
+    flex-direction: row;
+
+    background-color: #E5E5E5;
+}
+
+.section.payment {
+    width: 960px;
+    margin-left: 83px;
+}
+
+.payment-buy {
+    margin-bottom: 173px;
+    margin-left: 635px;
+}
+
+.buy-button {
+    width: 323px;
+    height: 60px;
+    
+    border-radius: 5px;
+    border: none;
+    background: #ffa800;
+    
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.buy-button:focus {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.buy-button:active {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid #ffa800;
+    background: transparent;
+    color: #ffa800;
+}

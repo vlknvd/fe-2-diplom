@@ -1,0 +1,370 @@
+.passanger {
+    margin-bottom: 44px;
+
+    border: 1px solid #c4c4c4;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    background: #fff; 
+}
+
+.passanger-head {
+    padding: 42px 40px 32px 23px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    background-color: #F9F9F9;
+}
+
+.passanger-content {
+    border-top: 1px dashed #928f94;
+}
+
+.passanger-head-hide {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    
+    background-image: url(/public/img/passangers/pass-hide.png);
+}
+
+.passanger-head-hide.show {
+    background-image: url(/public/img/passangers/add-pass-plus.png);
+}
+
+.passanger-head-title {
+    font-weight: 400;
+    font-size: 30px;
+    color: #292929;
+}
+
+.passanger-head-close {
+    width: 12px;
+    height: 12px;
+    margin-left: auto;
+
+    background-image: url(/public/img/passangers/pass-close.png);
+}
+
+.passanger-main {
+    display: flex;
+    flex-direction: column;
+    
+    padding-left: 36px;
+    padding-top: 38px;
+}
+
+.select-age {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    width: 280px;
+    height: 50px;
+    padding-left: 10px;
+
+    font-weight: 400;
+    font-size: 24px;
+    color: #292929;
+    
+    border: 1px solid #928F94;
+    border-radius: 5px;
+    
+    cursor: pointer;
+}
+
+.select-age::before {
+    content: '';
+
+    position: absolute;
+    left: 250px;
+
+    width: 12px;
+    height: 5px;
+
+    background-image: url(/public/img/passangers/select.png);
+}
+
+.select-ages.none {
+    display: none;
+}
+
+.passanger-select-age {
+    margin-bottom: 45px;
+}
+
+.passanger-names {
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 50px;
+}
+
+.passanger-names-title, .select-gender-title, .passanger-birth-title  {
+    margin-bottom: 12px;
+    
+    font-weight: 400;
+    font-size: 16px;
+    color: #928f94;
+}
+
+.passanger-names-input {
+    width: 280px;
+    height: 50px;
+    padding-left: 15px;
+    margin-right: 25px;
+
+    font-weight: 400;
+    font-size: 24px;
+
+    color: #292929;
+    background: #fff;
+    border: 1px solid #928f94;
+    border-radius: 5px;
+}
+
+.passanger-names-input.last {
+    margin-right: 0;
+}
+
+.passanger-birth {
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 45px;
+}
+
+.passanger-select-gender {
+    margin-right: 35px;
+}
+
+.select-gender {
+    display: flex;
+    flex-direction: row;
+
+    width: 204px;
+    height: 50px;
+
+    border: 1px solid #928f94;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.gender-select-color {
+    width: 50%;
+    
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.gender-select-color.gender-man {
+    border-right: 1px solid #928f94;
+}
+
+.gender-select-color.active {
+    background: #FFA800;
+}
+
+.passanger-birth-input {
+    width: 240px;
+    height: 50px;
+    padding-left: 20px;
+
+    border: 1px solid #928f94;
+    border-radius: 5px;
+    
+    font-weight: 400;
+    font-size: 18px;
+    color: #c4c4c4;
+}
+
+.passanger-restric-check {
+    padding-left: 84px;
+    padding-bottom: 31px;
+    margin-bottom: 36px;
+
+    display: flex;
+    flex-direction: row;
+    
+    border-bottom: 1px dashed #928f94;
+}
+
+.restric-check-text {
+    font-weight: 400;
+    font-size: 18px;
+    color: #292929;
+}
+
+input[type="checkbox"]:checked, 
+input[type="checkbox"]:not(:checked) {
+    display: none;
+}
+
+input[type="checkbox"]:checked + label, 
+input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before, 
+input[type="checkbox"]:not(:checked) + label:before {
+    content: "";
+
+    position: absolute;
+    left: -48px;
+
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid #928f94;
+    border-radius: 5px;
+    background: #fff;
+}
+
+input[type="checkbox"]:checked + label:before {
+    border: 1px solid #FFA800;
+}
+
+input[type="checkbox"]:checked + label:after, 
+input[type="checkbox"]:not(:checked) + label:after {
+    content: "";
+
+    position: absolute;
+    left: -44px;
+    top: 4px;
+
+    width: 23px;
+    height: 18px; 
+
+    background-image: url(/public/img/payment/check.png);
+}
+
+input[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+
+}
+
+input[type="checkbox"]:checked + .checkbox-text {
+    color: #FFA800;
+}
+
+.passanger-docs {
+    padding-left: 35px;
+    margin-bottom: 37px; 
+
+    display: flex;
+    flex-direction: row;
+
+    border-bottom: 1px dashed #928f94;
+}
+
+.select-docs.none {
+    display: none;
+}
+
+.docs-title, .docs-series-title, .docs-number-title {
+    margin-bottom: 14px;
+    
+    font-weight: 400;
+    font-size: 16px;
+    color: #928f94;
+}
+
+.select-doc, .docs-series-input, .docs-number-input {
+    width: 205px;
+    height: 50px;
+    margin-bottom: 33px;
+    padding-left: 16px;
+    
+    border: 1px solid #928f94;
+    border-radius: 5px;
+}
+
+.select-doc {
+    display: flex;
+    align-items: center;
+    margin-right: 35px;
+
+    position: relative;
+
+    font-weight: 400;
+    font-size: 18px;
+    color: #292929;
+    border-radius: 5px;
+    
+    cursor: pointer;
+}
+
+.select-doc::before {
+    content: '';
+
+    position: absolute;
+    left: 170px;
+
+    width: 12px;
+    height: 5px;
+
+    background-image: url(/public/img/passangers/select.png);
+}
+
+.docs-series {
+    margin-right: 35px;
+}
+
+.passanger-footer {
+    padding-right: 31px;
+}
+
+.passanger-footer-button {
+    width: 303px;
+    height: 52px;
+    margin-bottom: 33px;
+    margin-left: 626px;
+
+    border: 1px solid #292929;
+    border-radius: 5px;
+    background: #fff;
+
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #292929;
+}
+
+.passanger-footer-button:focus {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.passanger-footer-button:active {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #ffa800;
+    color: #292929;
+}
+
+.select-doc.child {
+    width: 444px;
+    height: 50px;
+
+    background: #fff;
+    border: 1px solid #928f94;
+    border-radius: 5px;
+}
+
+.select-doc.child::before {
+    content: '';
+    left: 410px;
+}
+
+.passanger-head.none {
+    border-bottom: none;
+} 

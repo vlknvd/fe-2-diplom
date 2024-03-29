@@ -1,0 +1,160 @@
+.search-form {
+    position: absolute;
+    bottom: 0;
+    right: 233px;
+    
+    width: 729px;
+    
+    background-color: rgba(41, 41, 41, 0.8);
+}
+
+.search-form-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 77px 24px 0 22px;
+}
+
+.search-form-block.block-route {
+    margin-bottom: 61px;
+}
+
+.search-form-block.block-date {
+    margin-bottom: 92px;
+}
+
+.search-form-block.block-controls {
+    margin-bottom: 52px;
+}
+
+.form-title {
+    margin-bottom: 7px;
+    
+    font-weight: 300;
+    font-size: 30px;
+    color: #fff;
+}
+
+.form-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-input-route, .form-input-date {
+    width: 325px;
+    height: 60px;
+    padding: 19px 0 24px 21px;
+
+    cursor: pointer;
+
+    border-radius: 3px;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-position: 95%;
+
+    font-weight: 400;
+    font-size: 18px;
+    color: #e5e5e5;
+}
+
+.form-input-route{
+    background-image: url(/public/img/search-form/location.png);
+}
+
+.form-input-date {
+    text-transform: uppercase;
+    background-image: url(/public/img/search-form/form-data.png)
+}
+
+.form-input-route:focus, .form-input-date:focus  {
+    outline: none;
+}
+
+.form-img-route {
+    width: 24px;
+    height: 24px;
+    
+    cursor: pointer;
+    background-image: url(/public/img/search-form/reset.png);
+}
+
+.form-controls_button {
+    width: 323px;
+    height: 60px;
+    margin-left: 361px;
+
+    border-radius: 5px;
+    background: #ffa800;
+
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #292929;
+}
+
+.form-controls_button:hover {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #ffa800;
+}
+
+.form-controls_button:active {
+    color: #ffa800;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid #ffa800;
+}
+
+/* Train */
+
+.search-form.trains {
+    width: 1490px;
+    margin: 0 auto;
+    top: 269px;
+}
+
+.search-form-container.trains {
+    padding: 28px 42px 76px 52px;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.block-route.trains{
+    max-width: 690px;
+}
+
+.block-date.trains {
+    max-width: 685px;
+}
+
+.block-route.trains {
+    margin-right: 35px;
+}
+
+.form-block.trains {
+    margin-bottom: 47px;
+}
+
+.form-title.trains {
+    font-weight: 300;
+    font-size: 30px;
+    color: #fff;
+}
+
+.form-input.trains {
+    width: 325px;
+    height: 60px;
+    
+    border-radius: 3px;
+}
+
+.form-input-date_there.trains {
+    margin-right: 35px;
+}
+
+.block-controls.trains {
+    margin-bottom: 0;
+}

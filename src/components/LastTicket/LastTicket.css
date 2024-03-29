@@ -1,0 +1,90 @@
+.last-ticket {
+    max-width: 360px;
+    margin-bottom: 17px;
+    padding: 18px;
+    
+    background: #FFFFFF;
+    box-shadow: 0 2px 2px 0 rgba(62, 60, 65, 0.25);
+}
+
+.ticket-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 29px;
+}
+
+.ticket-content.content-right {
+    text-align: right;
+}
+
+.ticket-title {
+    font-weight: 400;
+    font-size: 20px;
+    color: #292929;
+}
+
+.ticket-subtitle {
+    max-width: 95px;
+
+    font-weight: 400;
+    font-size: 16px;
+    color: #928f94;
+}
+
+.ticket-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket-options {
+    width: 92px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ticket-option {
+    width: 20px;
+    height: 20px;
+}
+
+.ticket-option.none {
+    display: none;
+}
+
+.ticket-price {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.price-text {
+    margin-right: 5px;
+}
+
+.price-text {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: right;
+    color: #928F94;
+}
+
+.price-title.last {
+    margin: 0 5px;
+    
+    font-weight: 700;
+    font-size: 36px;
+    color: #FFA800;
+}
+
+.price-currency {
+    width: 20px;
+    height: 25px;
+    
+    background-image: url(/public/img/widget-filter/currency.png)
+}

@@ -1,0 +1,78 @@
+.main.pass {
+    padding: 96px 256px 0 259px;
+
+    display: flex;
+    flex-direction: row;
+    
+    background-color: #E5E5E5;
+}
+
+.section.pass {
+    width: 960px;
+    margin-left: 83px;
+}
+
+.add-passanger {
+    margin-bottom: 103px;
+}
+
+.add-passanger-button {
+    position: relative;
+
+    width: 960px;
+    height: 97px;
+    padding-left: 26px;
+
+    border: 1px solid #c4c4c4;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+    
+    text-align: left;
+    font-weight: 400;
+    font-size: 30px;
+    color: #292929;
+}
+
+.add-passanger-button::before {
+    content: '';
+    
+    position: absolute;
+    left: 904px;
+    bottom: 40px;
+
+    width: 19px;
+    height: 19px;
+
+    background-image: url(/public/img/passangers/add-pass-plus.png);
+}
+
+.next-passanger {
+    margin-bottom: 140px;
+    margin-left: 738px;
+}
+
+.next-passanger-button {
+    width: 222px;
+    height: 60px;
+    padding-top: 15px;
+
+    border-radius: 5px;
+    background: #928f94;
+    
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.next-passanger-button:focus {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.next-passanger-button:active {
+    background: transparent;
+    border: 1px solid #ffa800;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: #ffa800;
+}

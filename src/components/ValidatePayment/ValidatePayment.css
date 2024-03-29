@@ -1,0 +1,18 @@
+.validate-form-body.pay {
+    border: 1px solid #c4c4c4;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.form-block-right.pay {
+    padding: 44px 0 74px 33px;
+}
+
+.method-title.pay {
+    font-weight: 400;
+    font-size: 24px;
+    color: #292929;
+}
+
+.validate-form.pay {
+    margin-bottom: 123px;
+}

@@ -1,0 +1,72 @@
+.section-hiw {
+    position: relative;
+
+    background-image: url(/public/img/hiw/hiw-background.png)
+}
+
+.hiw-container {
+    padding: 60px 268px 106px 258px;
+}
+
+.hiw-head {
+    margin-bottom: 97px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hiw-btn {
+    width: 325px;
+    height: 60px;
+
+    background-color: rgba(28,28,28,0);
+    border: 1px solid #fff;
+    border-radius: 5px;
+
+    font-size: 24px;
+    font-weight: 700;
+    color:#fff;
+}
+
+.hiw-btn:hover {
+    background: #ffca62;
+    color: #2d2b2f;
+}
+
+.hiw-btn:active {
+    background: #fff;
+}
+
+.hiw-title {
+    font-weight: 500;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.hiw-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.hiw-item {
+    max-width: 260px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hiw-item_img {
+    margin-bottom: 27px;
+}
+
+.hiw-item_content {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #e5e5e5;
+}

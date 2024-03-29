@@ -1,0 +1,287 @@
+.aside-widgets {
+    width: 360px;
+}
+
+.filter-dates, .filter-checkboxes, .filter-price {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.widget-filter {
+    padding-top: 43px;
+    margin-bottom: 96px;
+    
+    background: #3E3C41;
+    border-bottom: 1px solid transparent;
+}
+
+.filter-dates {
+    padding-bottom: 33px;
+}
+
+.filter-dates, .filter-checkboxes, .filter-price {
+    padding-left: 28px;
+    padding-right: 36px;
+}
+
+.date.date-from {
+    margin-bottom: 26px;
+}
+
+.date-title, .price-title {
+    margin-bottom: 11px;
+
+    font-weight: 400;
+    font-size: 30px;
+    color: #fff;
+}
+
+.date-input {
+    width: 100%;
+    height: 43px;
+    padding-left: 8px;
+
+    border-radius: 3px;
+    border: none;
+    
+    background-image:url(/public/img/widget-filter/form-data.png);
+    background-repeat: no-repeat;
+    background-position: 95%;
+    background-size: 8%;
+}
+
+/* checkbox */
+
+.filter-checkboxes {
+    padding-left: 68px;
+    margin-top: 25px;
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+
+    cursor: pointer;
+}
+
+.checkbox:last-child {
+    margin-bottom: 20px;
+}
+
+.checkbox-element {
+    position: relative;
+    margin-right: 15px;
+
+    cursor: pointer;
+}
+
+.checkbox-input {
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+  
+.checkbox-element.true::after {
+    content: '';
+
+    position: absolute;
+    top: -4px;
+    left: -10px;
+
+    width: 28px;
+    height: 28px;
+    
+    background-color: #FFA800;
+    border-radius: 50%;
+    transition: left 400ms ease-in-out;
+}
+
+.checkbox-element.true::before {
+    content: '';
+
+    position: absolute;
+    top: 0px;
+    left: -55px;
+    
+    width: 72px;
+    height: 20px;
+    
+    background-color: #FCDC9D;
+    border-radius: 15px;
+    transition: background-color 400ms ease;
+}
+
+.checkbox-element.false::after {
+    content: '';
+
+    position: absolute;
+    top: -4px;
+    left: -56px;
+    
+    width: 28px;
+    height: 28px;
+    
+    background-color: #C4C4C4;
+    border-radius: 50%;
+    transition: left 400ms ease-in-out;
+}
+
+.checkbox-element.false::before {
+    content: '';
+
+    position: absolute;
+    top: 0px;
+    left: -55px;
+    
+    width: 72px;
+    height: 20px;
+   
+    background-color: #FFFFFF;;
+    border-radius: 15px;
+    transition: background-color 400ms ease;
+}
+
+.checkbox-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 34px;
+}
+
+.checkbox-title {
+    margin-right: auto;
+    
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* price */
+
+.filter-price {
+    padding-bottom: 32px;
+    padding-top: 37px;
+}
+
+.price-title {
+    margin-bottom: 12px;
+}
+
+.range-text {
+    margin-bottom: 5px;
+    
+    display: flex;
+    justify-content: space-between;
+
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+}
+
+.range-input-out, .range-input-in {
+    position: absolute;
+    z-index: 1;
+
+    width: 295px;
+    height: 20px;
+
+    background: transparent;
+    appearance: none;
+    border-radius: 8px;
+    pointer-events: none;
+}
+  
+.range-input-in {
+    transform: rotate(0deg);
+}
+
+.range-input-in::-webkit-slider-thumb, .range-input-out::-webkit-slider-thumb {
+    -webkit-appearance: none;
+
+    height: 24px;
+    width: 24px;
+
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.range-input-in::-moz-range-thumb, .range-input-out::-moz-range-thumb {
+    height: 24px;
+    width: 24px;
+
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.range-input {
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+
+    width: 295px;
+    height: 20px;
+
+    border: 1px solid #C4C4C4;
+    border-radius: 9px;
+    background-color: transparent;
+}
+
+.range-line {
+    position: relative;
+    z-index: 0;
+    
+    width: 280px;
+    height: 20px;
+}
+
+.range-line-body {
+    position: absolute;
+    top: -1px;
+    z-index: 1;
+
+    height: 20px;
+
+    background-color: #FFA800;
+}
+
+.range-number {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    font-weight: 400;
+    font-size: 16px;
+    text-align: right;
+}
+
+.price-start {
+    padding-right: 2px;
+
+    font-weight: 400;
+    font-size: 16px;
+    color: #e5e5e5;
+}
+
+.price-end {
+    padding-left: 2px;
+
+    font-weight: 400;
+    font-size: 16px;
+    color: #e5e5e5;
+}
+
+.last-tickets-title {
+    margin-bottom: 26px;
+    
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #000;
+}

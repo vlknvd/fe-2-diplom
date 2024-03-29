@@ -1,0 +1,134 @@
+.change-button {
+    width: 233px;
+    height: 39px;
+
+    border: 1px solid #292929;
+    background-color: transparent;
+    border-radius: 5px;
+
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #292929;
+}
+
+.change-button:focus {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: #ffa800;
+}
+
+.change-button:active {
+    color: #292929;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #ffa800;
+}
+
+.validate-form-body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    background: #fff;
+}    
+
+.validate-form-body.pass {
+    border: 1px solid #c4c4c4;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.form-block-right {
+    width: 71%;
+
+    border-right: 1px dashed #e5e5e5;
+}
+
+.form-block-left {
+    width: 29%;
+    margin-bottom: 25px;
+    padding-left: 25px;
+}
+ 
+.passanger-info:last-child {
+    padding-bottom: 90px;
+
+    border-bottom: none;
+}
+
+.passanger-info {
+    padding: 61px 0 34px 30px;
+
+    display: flex;
+    flex-direction: row;
+    
+    border-bottom: 1px dashed #e5e5e5;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+    margin-bottom: 29px;
+    margin-right: 53px;
+}
+
+.result-sum {
+    font-weight: 400;
+    font-size: 30px;
+    color: #292929;
+}
+
+.result-number {
+    position: relative;
+
+    font-weight: 700;
+    font-size: 30px;
+    color: #292929;
+}
+
+.result-number::after {
+    content: '';
+
+    position: absolute;
+    top: 8px;
+    right: -25px;
+    
+    width: 20px;
+    height: 24px;
+    
+    background-image: url(/public/img/validate/currency.png)
+}
+
+.age {
+    margin-right: 32px;
+}
+
+.age > div{
+    width: 68px;
+    height: 68px;
+    margin-bottom: 17px;
+
+    background-image: url(/public/img/validate-pass.png)
+}
+
+.age > p {
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #292929;
+}
+
+.description > .name {
+    margin-bottom: 13px;
+    
+    font-weight: 400;
+    font-size: 18px;
+    color: #292929;
+}
+
+.description > .text {
+    font-weight: 400;
+    font-size: 18px;
+    color: #928f94;
+}

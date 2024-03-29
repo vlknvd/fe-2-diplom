@@ -1,0 +1,288 @@
+.aside.widget-details {
+    width: 360px;
+    height: 100%;
+    
+    background: #3e3c41;
+}
+
+.details-title {
+    padding: 35px 0 30px 43px;
+
+    border-bottom: 1px solid #e5e5e5; 
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #e5e5e5;
+}
+
+.details-route-head { 
+    padding: 22px 28px 0 28px;
+    margin-bottom: 49px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.head-img {
+    width: 32px;
+    height: 26px;
+    margin-right: 12px;
+
+    background-image: url(/public/img/widget-details/subtract.png)
+}
+
+.head-title {
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+}
+
+.head-date {
+    margin-left: auto;
+
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+}
+
+.head-hide {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    
+    background-image: url(/public/img/widget-details/hide.png)
+}
+
+.head-hide.show {
+    background-image: url(/public/img/widget-details/show.png)
+}
+
+.details-route-content {
+    padding-left: 28px;
+    padding-right: 27px;
+}
+
+.number {
+    margin-bottom: 22px;
+}
+
+.number, .name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.date {
+    margin-bottom: 17px;
+}
+
+.details-route-content {
+    margin-bottom: 71px;
+}
+
+.number > h4, .name > h4 {
+    font-weight: 400;
+    font-size: 18px;
+    color: #e5e5e5;
+}
+
+.number > p {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: right;
+    color: #fff;
+}
+
+.city-name > p {
+    max-width: 130px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: right;
+    color: #fff;
+}
+
+.details-route-time {
+    padding: 0 28px 64px 28px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.time-box {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-box > p {
+    position: absolute;
+    top: -25px;
+
+    font-weight: 400;
+    font-size: 18px;
+    color: #e5e5e5;
+}
+
+.direction-arr {
+    width: 30px;
+    height: 20px;
+
+    background-image: url(/public/img/widget-details/arrow.png)
+}
+
+.there-direction-to {
+    text-align: right;
+}
+
+.time {
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+}
+
+.date {
+    font-weight: 400;
+    font-size: 18px;
+    color: #928f94;
+}
+
+.there-direction-from > h5, .there-direction-to > h5  {
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+}
+
+.there-direction-from > p, .there-direction-to > p  {
+    max-width: 115px;
+
+    font-size: 16px;
+    color: #928f94;
+}
+
+.head-img.back {
+    background-image: url(/public/img/widget-details/subtract-back.png)
+}
+
+.direction-arr.back {
+    background-image: url(/public/img/widget-details/arrow-back.png)
+}
+
+.widget-details-pass {
+    padding: 20px 27px 0 29px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.pass-head {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    margin-bottom: 27px;
+}
+
+.head-img {
+    width: 26px;
+    height: 26px;
+    margin-right: 17px;
+
+    background-image: url(/public/img/widget-details/pass.png)
+}
+
+.head-title {
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+}
+
+.head-hide {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    
+    background-image: url(/public/img/widget-details/hide.png)
+}
+
+.pass-age-price {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+.pass-age-price:last-child {
+    margin-bottom: 46px;
+}
+
+.age-count {
+    font-weight: 400;
+    font-size: 18px;
+    color: #e5e5e5;
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.pass-age-price > .price > p {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: right;
+    color: #fff;
+}
+
+.pass-age-price > .price > div {
+    width: 14px;
+    height: 17px;
+    margin-left: 7px;
+
+    background-image: url(/public/img/widget-details/currency-pass.png)
+}
+
+.widget-details-total {
+    padding: 30px 27px 33px 28px;
+ 
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.total-title {
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.total {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline
+}
+
+.total-price {
+    margin-right: 11px;
+    
+    font-weight: 700;
+    font-size: 48px;
+    color: #ffa800;
+}
+
+.total-currency {
+    width: 26px;
+    height: 32px;
+    
+    background-image: url(/public/img/widget-details/currency.png)
+}

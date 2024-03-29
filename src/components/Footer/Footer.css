@@ -1,0 +1,210 @@
+.footer {
+    background-color: #2d2b2f;
+}
+
+.footer-container {
+    padding-top: 49px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-content.top {
+    padding: 0 268px 0 343px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.footer-content.bottom {
+    padding: 0 268px 0 256px;
+}
+
+.footer-content_block.block-right {
+    margin-bottom: 73px;
+}
+
+.block-title {
+    margin-bottom: 31px;
+    
+    font-weight: 500;
+    font-size: 30px;
+    color: #fff;
+}
+
+.block-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    margin-bottom: 27px;
+}
+
+.block-item_link, .block-item_link:hover, .block-item_link:visited, .block-item_link:active {
+    text-decoration: none;
+}
+
+.block-item:last-child {
+    margin-bottom: 52px;
+}
+
+.block-item_img {
+    margin-right: 36px;
+}
+
+.block-item_text {
+    max-width: 250px;
+
+    font-weight: 400;
+    font-size: 24px;
+    color: #e5e5e5;
+}
+
+.feedback-subtitle {
+    margin-bottom: 15px;
+
+    font-weight: 400;
+    font-size: 24px;
+    color: #e5e5e5;
+}
+
+.feedback-content {
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 44px;
+}
+
+.feedback-input {
+    width: 447px;
+    height: 60px;
+    margin-right: 33px;
+    padding: 17px 0 17px 21px;
+
+    font-weight: 400;
+    font-size: 24px;
+    color: #e5e5e5;
+}
+
+.feedback-button {
+    width: 169px;
+    height:  60px;
+
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    background-color: rgba(28,28,28,0);
+    border: 1px solid #FFFFFF;
+    color: #E5E5E5;
+}
+
+.feedback-button:hover {
+    background: #ffca62;
+    color: #2d2b2f;
+}
+
+.feedback-button:active {
+    background: #fff;
+}
+
+.social-group-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.social-img {
+    height: 30px;
+}
+
+.social-img.youtube {
+    width: 38px;
+
+    background-image: url(/public/img/footer/youtube.png)
+}
+
+.social-img.youtube:hover {
+    background-image: url(/public/img/footer/youtube-hover.png)
+}
+
+.social-img.linkedin {
+    width: 30px;
+
+    background-image: url(/public/img/footer/linkedin.png)
+}
+
+.social-img.linkedin:hover {
+    background-image: url(/public/img/footer/linkedin-hover.png)
+}
+
+.social-img.gmail {
+    width: 47px;
+
+    background-image: url(/public/img/footer/gmail.png)
+}
+
+.social-img.gmail:hover {
+    background-image: url(/public/img/footer/gmail-hover.png)
+}
+
+.social-img.facebook {
+    width: 14px;
+    
+    background-image: url(/public/img/footer/facebook.png)
+}
+
+.social-img.facebook:hover {
+    background-image: url(/public/img/footer/facebook-hover.png)
+}
+
+.social-img.twitter {
+    width: 37px;
+
+    background-image: url(/public/img/footer/twitter.png)
+}
+
+.social-img.twitter:hover {
+    background-image: url(/public/img/footer/twitter-hover.png)
+}
+
+.social-item {
+    margin-right: 48px;
+}
+
+.footer-content_block.block-bottom{
+    width: 100%;
+    margin-top: 26px;
+    margin-bottom: 33px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block-bottom-arrow {
+    width: 36px;
+    height: 36px;
+
+    background-image: url(/public/img/footer/arrow.png);
+}
+
+.block-bottom-arrow:hover {
+    background-image: url(/public/img/footer/arrow-hover.png)
+} 
+
+.block-bottom-text {
+    font-weight: 300;
+
+    font-size: 24px;
+    color: #e5e5e5;
+}
+
+.block-bottom-text.logo {
+    font-weight: 900;
+    
+    font-size: 36px;
+    color: #e5e5e5;
+}

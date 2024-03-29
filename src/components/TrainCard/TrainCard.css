@@ -1,0 +1,196 @@
+.train-card {
+    display: flex;
+
+    width: 960px;
+    min-height: 270px;
+    margin-bottom: 50px;
+
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-head {
+    width: 196px;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    background: #e4dfe9;
+}
+
+.card-head-img {
+    width: 86px;
+    height: 86px;
+    margin: 32px 0 17px 42px;
+}
+
+.card-head-name {
+    margin-bottom: 15px;
+    margin-left: 53px;
+    
+    font-weight: 500;
+    font-size: 24px;
+    color: #3e3c41;
+}
+
+.card-head-direction {
+    margin-left: 25px;
+    
+    font-weight: 400;
+    font-size: 16px;
+    color: #292929;
+}
+
+.card-direction {
+    width: 479px;
+    padding: 54px 36px 0 39px;
+
+    border-right: 1px dashed #e5e5e5;;
+}
+
+.direction-route {
+    margin-bottom: 66px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.direction-time{
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+}
+
+.direction-city {
+    font-weight: 400;
+    font-size: 18px;
+    color: #292929;
+}
+
+.arrow-img {
+    width: 30px;
+}
+
+.travel-time {
+    font-weight: 400;
+    font-size: 18px;
+    color: #c4c4c4;
+}
+
+.direction-station {
+    font-weight: 400;
+    font-size: 16px;
+    color: #928f94;
+}
+
+.card-seats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    padding-top: 41px;
+    padding-bottom: 22px;
+}
+
+.card-seat {
+    width: 234px;
+    height: 29px;
+    margin-left: 27px;
+    margin-bottom: 29px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.seat-class {
+    margin-right: auto;
+    
+    font-weight: 400;
+    font-size: 16px;
+    color: #3e3c41;
+}
+
+.seats-amount {
+    margin-right: 15px;
+
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffa800;
+}
+
+.seat-start-price {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.seat-start-text {
+    margin-right: 6px;
+    
+    font-weight: 400;
+    font-size: 16px;
+    color: #928f94;
+}
+
+.seat-start-number {
+    margin-right: 7px;
+    
+    font-weight: 700;
+    font-size: 24px;
+    color: #2d2b2f;
+}
+
+.seat-currency {
+    width: 16px;
+    height: 19px;
+
+    background-image: url(/public/img/train-card/currency.png)
+}
+
+.card-seat.last {
+    margin-bottom: auto;
+}
+
+.card-options {
+    height: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.card-option {
+    margin-right: 16px;
+}
+
+.card-option:last-child {
+    margin-right: 0;
+}
+
+.choice-seat {
+    width: 228px;
+    height: 39px;
+    
+    background: #ffa800;
+    border-radius: 5px;
+    border: none;
+    
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+.choice-seat:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: filter 200ms ease-in-out;
+}
+  
+.choice-seat:focus {
+    border: 1px solid #FFA800;
+    background-color: transparent;
+    color: #FFA800;
+}

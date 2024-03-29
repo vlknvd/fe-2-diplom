@@ -1,0 +1,13 @@
+.main.trains {
+    padding: 96px 256px 0 259px;
+
+    display: flex;
+    flex-direction: row;
+    
+    background-color: #E5E5E5;
+}
+
+.selection-train {
+    width: 960px;
+}
+

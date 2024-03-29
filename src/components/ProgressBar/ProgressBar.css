@@ -1,0 +1,90 @@
+.progress-bar.trains {
+    display: flex;
+    position: sticky;
+
+    height: 100px;
+    width: 100%;
+
+    background: #3e3c41;
+}
+
+.step-start, .step-end {
+    height: 100%;
+    width: 13.1%;
+}
+
+.step-tickets, .step-passangers, .step-pay, .step-validate {
+    display: flex;
+    align-items: center;
+    
+    position: relative;
+    width: 324px;
+}
+
+.step-passangers, .step-pay, .step-validate {
+    margin-left: 37px;
+}
+
+.current-step, .progress-bar.trains.current-step {
+    background-color: #ffa800;
+}
+
+.step-number {
+    position: relative;
+    
+    width: 56px;
+    height: 56px;
+    margin: auto 20px auto 40px;    
+    
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.step-number>p, .step-content {
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.step-number>p {
+    position: absolute;
+    left: 15px;
+    top: 4px;
+    
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.step-arrow {
+    position: absolute;
+    left: 290px;
+    z-index: 1;
+}
+
+.arrow-top, .arrow-bottom {
+    height: 50px;
+    width: 50px;
+    
+    border-right: 2px solid #fff;
+}
+
+.arrow-top {
+    transform: skewX(35deg);
+}
+
+.arrow-bottom {
+    transform: skewX(-35deg);
+}
+
+.step-content {
+    font-size: 30px;
+}
+
+.step-arrow-out {
+    width: 40px;
+    height: 100px;
+
+    position: absolute;
+    left: -40px;
+}
