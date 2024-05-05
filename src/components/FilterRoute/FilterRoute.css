@@ -1,23 +1,25 @@
 .filter-route {
     display: flex;
+    align-items: center;
     width: 100%;
     margin-bottom: 47px;
 }
 
 .route-found {
     display: flex;
-    margin-right: auto;
+    margin-right: auto; 
 }
 
 .route-sort {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .route-found > p,
 .route-found > span,
 .route-sort > p,
-.route-show > p,
-.route-show > span {
+.route-show > p {
     margin-right: 5px;
     
     font-weight: 400;
@@ -25,51 +27,58 @@
     line-height: 21px;
     color: #928F94;
 }
-  
-.sort-selected, .route-show > span.sort-selected {
-    margin-left: 5px;
-    
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    color: #3E3C41;
-    cursor: pointer;
+
+.sort-selection__control {
+    width: 140px !important;
+    border: none !important;
+    background: transparent !important;
 }
 
-.sort.none {
+.sort-selection__control--menu-is-open, .sort-selection__menu {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
+    border-radius: 0 !important;
+    background: #f7f5f9 !important;
+}
+
+.sort-selection__menu {
+    width: 140px !important;
+    margin-top: 0 !important;
+    border: none !important;
+    color: #292929;
+}
+
+.sort-selection__option--is-focused, .sort-selection__option--is-selected {
+    background-color: #ffa800 !important;
+}
+
+.sort-selection__indicators.css-4xgw5l-IndicatorsContainer2, .sort-selection__indicators.css-4xgw5l-IndicatorsContainer2 {
     display: none;
 }
 
-.sort {
-    position: absolute;
-    left: 142px;
-    top: 0;
-    
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    color: #3E3C41;
-    cursor: pointer;
-    
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    background: #f7f5f9;
-}
-
-.select {
-    padding: 5px 13px 15px 7px;
-    
-    border-bottom: 1px solid #e5e5e5;;
-}
-
-.select-duration {
-    border-bottom: none;
-}
-  
 .route-show {
     display: flex;
     margin-left: 68px;
 }
 
-.route-show > span {
+.route-show > button {
     cursor: pointer;
+}
+
+.sort {
+    background-color: transparent;
+    border: none;
+    color: #928F94;
+}
+
+.sort, .sort-selected {
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.sort-selected {
+    margin-left: 10px;
+    background: transparent;
+    border: none;
+    color: #292929;
 }

@@ -1,80 +1,50 @@
-const CardSeat = () => {
+import { useEffect } from "react"
+import Seat from "./Seat"
+import { useNavigate } from "react-router-dom"
+
+const CardSeat = ({ availableSeats, priceDep, priceArr, conditioner, wifi, express, onClick}) => {
+
     return (
         <div className='card-seats'>
-            <div className="card-seat">
-                <p className='seat-class'>Сидячий</p>
-                <span className='seats-amount'>99
-                    {/* <!-- <div class='seat-amount'>
-                        <div class='seat-up'>
-                            <p class='ticket-class'>Сидячий</p>
-                            <p class='seat-ticket-start-number'>1920</p>
-                            <span class='sign-currency'></span>
-                        </div>
-                    </div> --> */}
-                </span>
-                <div className='seat-start-price'>
-                    <p className='seat-start-text'>от</p>
-                    <p className='seat-start-number'>1920</p>
-                    <div className='seat-currency'></div>
-                </div>
-            </div>
-            <div className="card-seat">
-                <p className='seat-class'>Купе</p>
-                <span className='seats-amount'>99
-                    {/* <!-- <div class='seat-amount'>
-                        <div class='seat-up'>
-                            <p class='ticket-class'>Сидячий</p>
-                            <p class='seat-ticket-start-number'>1920</p>
-                            <span class='sign-currency'></span>
-                        </div>
-                    </div> --> */}
-                </span>
-                <div className='seat-start-price'>
-                    <p className='seat-start-text'>от</p>
-                    <p className='seat-start-number'>1920</p>
-                    <div className='seat-currency'></div>
-                </div>
-            </div>
-            <div className="card-seat">
-                <p className='seat-class'>Плацкарт</p>
-                <span className='seats-amount'>99
-                    {/* <!-- <div class='seat-amount'>
-                        <div class='seat-up'>
-                            <p class='ticket-class'>Сидячий</p>
-                            <p class='seat-ticket-start-number'>1920</p>
-                            <span class='sign-currency'></span>
-                        </div>
-                    </div> --> */}
-                </span>
-                <div className='seat-start-price'>
-                    <p className='seat-start-text'>от</p>
-                    <p className='seat-start-number'>1920</p>
-                    <div className='seat-currency'></div>
-                </div>
-            </div>
-            <div className="card-seat last">
-                <p className='seat-class'>Люкс</p>
-                <span className='seats-amount'>99
-                    {/* <!-- <div class='seat-amount'>
-                        <div class='seat-up'>
-                            <p class='ticket-class'>Сидячий</p>
-                            <p class='seat-ticket-start-number'>1920</p>
-                            <span class='sign-currency'></span>
-                        </div>
-                    </div> --> */}
-                </span>
-                <div className='seat-start-price'>
-                    <p className='seat-start-text'>от</p>
-                    <p className='seat-start-number'>1920</p>
-                    <div className='seat-currency'></div>
-                </div>
-            </div>
+            {availableSeats?.fourth && 
+                <Seat 
+                priceDep={priceDep?.fourth}
+                priceArr={priceArr?.fourth}
+                name={'Сидячий'}
+                seat={availableSeats?.fourth}
+                />
+            }
+            {availableSeats?.second && 
+                <Seat 
+                priceDep={priceDep?.second}
+                priceArr={priceArr?.second}
+                name={'Купе'}
+                seat={availableSeats?.second}
+                />
+            }
+            {availableSeats?.third && 
+                <Seat 
+                priceDep={priceDep?.third}
+                priceArr={priceArr?.third}
+                name={'Плацкарт'}
+                seat={availableSeats?.third}
+                />
+            }
+            {availableSeats?.first &&
+                <Seat 
+                priceDep={priceDep?.first}
+                priceArr={priceArr?.first}
+                name={'Люкс'}
+                seat={availableSeats?.first}
+                />
+            }
             <div className="card-options">
-                <img src="./img/train-card/option.png" alt="" className="card-option" />
-                <img src="./img/train-card/option1.png" alt="" className="card-option" />
+                {conditioner && <img src="./img/train-card/option.png" alt="" className="card-option" />}
+                {wifi && <img src="./img/train-card/option-3.png" alt="" className="card-option" />}
+                {express && <img src="./img/train-card/option-2.png" alt="" className="card-option" />}
             </div>
             <div className="card-button">
-                <button className="choice-seat">Выбрать места</button>
+                <button className="choice-seat" onClick={onClick}>Выбрать места</button>
             </div>
         </div> 
     )

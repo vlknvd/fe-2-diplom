@@ -1,4 +1,5 @@
 import './HowItWork.css'
+import HowItWorkItem from './HowItWorkItem'
 
 const HowItWork = () => {
     return (
@@ -10,27 +11,9 @@ const HowItWork = () => {
                 </div>  
                 <div className="hiw-content">
                     <div className="hiw-list">
-                        <div className="hiw-item">
-                            <img src="./img/hiw/hiw-1.png" alt="" className="hiw-item_img" />
-                            <p className="hiw-item_content">
-                                Удобный заказ
-                                на сайте
-                            </p>
-                        </div>
-                        <div className="hiw-item">
-                            <img src="./img/hiw/hiw-2.png" alt="" className="hiw-item_img" />
-                            <p className="hiw-item_content">
-                                Нет необходимости
-                                ехать в офис
-                            </p>
-                        </div>
-                        <div className="hiw-item">
-                            <img src="./img/hiw/hiw-3.png" alt="" className="hiw-item_img" />
-                            <p className="hiw-item_content">
-                                Огромный выбор
-                                направлений
-                            </p>
-                        </div>
+                        <HowItWorkItem link='./img/hiw/hiw-1.png' text='Удобный заказ на сайте' />
+                        <HowItWorkItem link='./img/hiw/hiw-2.png' text='Нет необходимости ехать в офис' />
+                        <HowItWorkItem link='./img/hiw/hiw-3.png' text='Огромный выбор направлений' />
                     </div>
                 </div>
             </div>

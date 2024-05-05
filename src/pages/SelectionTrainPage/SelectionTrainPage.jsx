@@ -5,9 +5,7 @@ import Footer from '../../components/Footer/Footer'
 import ProgressBar from '../../components/ProgressBar/ProgressBar'
 import WidgetFilter from '../../components/WidgetFilter/WidgetFilter'
 import './SelectionTrainPage.css'
-import FilterRoute from '../../components/FilterRoute/FilterRoute'
 import SelectionTrain from '../../components/SelectionTrain/SelectionTrain'
-import ChangePages from '../../components/ChangePages/ChangePages'
 
 
 const SelectionTrainPage = () => {
@@ -22,9 +20,7 @@ const SelectionTrainPage = () => {
                 <WidgetFilter />
                 <section className='section trains'>
                     <div className='selection-train'>
-                        <FilterRoute />
                         <SelectionTrain />
-                        <ChangePages />
                     </div>
                 </section>
             </main>

@@ -1,64 +1,60 @@
 import FilterTime from '../FilterTime/FilterTime'
-import LastTicket from '../LastTicket/LastTicket'
+import LastTickets from '../LastTickets/LastTickets'
 import './WidgetFilter.css'
+import Checkbox from './components/Checkbox'
+import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from "react-redux"
+import CalendarForm from '../CalendarForm/CalendarForm'
+import { getOptions } from '../../store/getWidgetFilterSlice'
+import RangeSlider from 'react-range-slider-input';
+
 
 const WidgetFilter = () => {
+    const [calendar, setCalendar] = useState({direction: '', open: false})
+    const { fromDate, toDate } = useSelector((state) => state.choice)
+    const dispatch = useDispatch()
+    const item = JSON.parse(localStorage.getItem('trains'))
+
+    const onClick = (e) => {
+        setCalendar((prev) => ({ ...prev, direction: e.target.id}))
+        calendar.open === false ? setCalendar((prev) => ({ ...prev, open: true})) : setCalendar((prev) => ({ ...prev, open: false}))
+    }
+
     return (
         <aside className="aside-widgets">
             <div className="widget-filter">
                 <div className="filter-dates">
-                    <div className="date date-from">
-                        <h3 className="date-title from">Дата поездки</h3>
-                        <input type="text" className="date-input from" placeholder="ДД/ММ/ГГ" value="" defaultChecked/>
+                    <div className='date date-from'>
+                        <h3 className='date-title from'>Дата поездки</h3>
+                        <input 
+                        type="date"
+                        className='date-input from' 
+                        id='from'
+                        placeholder="ДД/ММ/ГГ"
+                        onClick={onClick}
+                        defaultValue={fromDate}
+                        defaultChecked/>
                     </div>
-                    <div className="date date-to">
-                        <h3 className="date-title to">Дата возвращения</h3>
-                        <input type="text" className="date-input to" placeholder="ДД/ММ/ГГ" value="" defaultChecked/>
+                    <div className='date date-to'>
+                        <h3 className='date-title to'>Дата возвращения</h3>
+                        <input 
+                        type="date"
+                        className='date-input to' 
+                        id='to'
+                        placeholder="ДД/ММ/ГГ"
+                        onClick={onClick}
+                        defaultValue={toDate}
+                        defaultChecked/>
                     </div>
+                    {calendar.open && <CalendarForm name={`main-page train ${calendar.direction}` } direction={calendar.direction}/>}
                 </div>
                 <div className="filter-checkboxes">
-                    <div className="checkbox">
-                        <img src="./img/widget-filter/filter-1.png" alt="купе" className="checkbox-img" />
-                        <h3 className="checkbox-title">Купе</h3>
-                        <div className="checkbox-element false"> 
-                            <input type="checkbox" className="checkbox-input" />
-                        </div>
-                    </div>
-                    <div className="checkbox">
-                        <img src="./img/widget-filter/filter-2.png" alt="плацкарт" className="checkbox-img" />
-                        <h3 className="checkbox-title">Плацкарт</h3>
-                        <div className="checkbox-element true">
-                            <input type="checkbox" className="checkbox-input" />
-                        </div>
-                    </div>
-                    <div className="checkbox">
-                        <img src="./img/widget-filter/filter-3.png" alt="сидячий" className="checkbox-img" />
-                        <h3 className="checkbox-title">Сидячий</h3>
-                        <div className="checkbox-element true"> 
-                            <input type="checkbox" className="checkbox-input" />
-                        </div>
-                    </div>
-                    <div className="checkbox">
-                        <img src="./img/widget-filter/filter-4.png" alt="люкс" className="checkbox-img" />
-                        <h3 className="checkbox-title">Люкс</h3>
-                        <div className="checkbox-element true"> 
-                            <input type="checkbox" className="checkbox-input" />
-                        </div>
-                    </div>
-                    <div className="checkbox">
-                        <img src="./img/widget-filter/filter-5.png" alt="wi-fi" className="checkbox-img" />
-                        <h3 className="checkbox-title">Wi-Fi</h3>
-                        <div className="checkbox-element false"> 
-                            <input type="checkbox" className="checkbox-input" />
-                        </div>
-                    </div>
-                    <div className="checkbox">
-                        <img src="./img/widget-filter/filter-6.png" alt="" className="checkbox-img" />
-                        <h3 className="checkbox-title">Экспресс</h3>
-                        <div className="checkbox-element false"> 
-                            <input type="checkbox" className="checkbox-input" />
-                        </div>
-                    </div>     
+                    <Checkbox link={"./img/widget-filter/filter-1.png"} alt={"купе"} name={'Купе'} id={'coupe'}/>
+                    <Checkbox link={"./img/widget-filter/filter-2.png"} alt={"плацкарт"} name={'Плацкарт'} id={'reserved'}/>
+                    <Checkbox link={"./img/widget-filter/filter-3.png"} alt={"сидячий"} name={'Сидячий'} id={'seated'}/>
+                    <Checkbox link={"./img/widget-filter/filter-4.png"} alt={"люкс"} name={'Люкс'} id={'lux'}/>
+                    <Checkbox link={"./img/widget-filter/filter-5.png"} alt={"wi-fi"} name={'Wi-Fi'} id={'wifi'}/>
+                    <Checkbox link={"./img/widget-filter/filter-6.png"} alt={"экспресс"} name={'Экспресс'} id={'express'}/>
                 </div>
                 <div className="filter-price">
                     <h3 className="price-title">Cтоимость</h3>
@@ -67,24 +63,12 @@ const WidgetFilter = () => {
                             <p>от</p>
                             <p>до</p>
                         </div>
-                        <div className='range-input'>
-                            <input className='range-input-in' type="range" min='11' max='22' value="15"/>
-                            {/* <!-- <input class='range-input-out' type="range" min='' max='' value=""/> --> */}
-                            <div className='range-line'></div>
-                            <div className='range-line-body'>
-                                {/* <!-- style={{
-                                    left: `${leftValue(maxPrice, minPrice, price.start)}%`,
-                                    right: `${rightValue(maxPrice, minPrice, price.end)}%`
-                                }} --> */}
-                            </div>
-                        </div>
+                        <RangeSlider className={'range-input-in'} min={0} max={8000}/>
                     </div>
                     <div className='range-number'>
-                        {/* <!-- <p class='price-min'>11</p> --> */}
-                        <p className='price-start'>15</p>
-                        <p className='price-end'>20</p>
-                        {/* <!-- <p class='price-max'>22</p> --> */}
-                      </div>
+                        <p className='price-start'>0</p>
+                        <p className='price-end'>100</p>
+                    </div>
                 </div>
                 <FilterTime title={'Туда'} route={'to'} />
                 <FilterTime title={'Обратно'} route={'back'}/>
@@ -92,7 +76,7 @@ const WidgetFilter = () => {
             <div className="widget-last-tickets">
                 <h3 className="last-tickets-title">Последние билеты</h3>
                 <div className="last-tickets">
-                    <LastTicket />
+                    <LastTickets />
                 </div>
             </div>
         </aside>

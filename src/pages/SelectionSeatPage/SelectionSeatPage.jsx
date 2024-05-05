@@ -6,8 +6,11 @@ import SelectionSeat from '../../components/SelectionSeat/SelectionSeat'
 import Footer from '../../components/Footer/Footer'
 import WidgetFilter from '../../components/WidgetFilter/WidgetFilter'
 import './SelectionSeatPage.css'
+import { useSelector } from 'react-redux'
 
 const SelectionSeatPage = () => {
+    const train = JSON.parse(localStorage.getItem('train'))
+    console.log(train)
     return (
         <>
             <Header />
@@ -19,8 +22,8 @@ const SelectionSeatPage = () => {
                 <WidgetFilter />
                 <section className='section seat'>
                     <h3 class="seat-title">Выбор мест</h3>
-                    <SelectionSeat />
-                    <SelectionSeat route={'back'}/>
+                    <SelectionSeat route={'to'} direction={'departure'} train={train}/>
+                    {train.arrival && <SelectionSeat route={'back'} direction={'arrival'} train={train}/>}
                     <button className="seat-button">Далее</button>
                 </section>
                 

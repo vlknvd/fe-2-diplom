@@ -1,24 +1,14 @@
-const SeatCarriageType = () => {
+import CarriageType from "./CarriageType"
+
+const SeatCarriageType = ({seat, onClick}) => {
     return (
         <div className="seat-carriage-type">
             <h3 className="carriage-type-title">Тип вагона</h3>
             <div className="carriage-types">
-                <div className="carriage-type">
-                    <div className="carriage-type-img sed"></div>
-                    <p className="carriage-type-subtitle">Сидячий</p>
-                </div>
-                <div className="carriage-type">
-                    <div className="carriage-type-img res"></div>
-                    <p className="carriage-type-subtitle">Плацкарт</p>
-                </div>
-                <div className="carriage-type">
-                    <div className="carriage-type-img coupe"></div>
-                    <p className="carriage-type-subtitle">Купе</p>
-                </div>
-                <div className="carriage-type">
-                    <div className="carriage-type-img lux active"></div>
-                    <p className="carriage-type-subtitle active">Люкс</p>
-                </div>
+                {seat.first && <CarriageType link={'lux'} name={'Люкс'} onClick={onClick} id={'have_first_class'}/>}
+                {seat.second && <CarriageType link={'coupe'} name={'Купе'} onClick={onClick} id={'have_second_class'}/>}
+                {seat.third && <CarriageType link={'res'} name={'Плацкарт'} onClick={onClick} id={'have_third_class'}/>}
+                {seat.fourth && <CarriageType link={'sed'} name={'Сидячий'} onClick={onClick} id={'have_fourth_class'}/>}
             </div>
         </div>
     )

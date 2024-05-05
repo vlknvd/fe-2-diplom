@@ -1,30 +1,40 @@
+import { useState } from 'react'
 import './FilterRoute.css'
+import Select from 'react-select'
+import FilterButton from './FilterButton'
 
 
 const FilterRoute = () => {
+    const trains = JSON.parse(localStorage.getItem('trains'))
+    const [selectedOption, setSelectedOption] = useState(null);
+
+    const options = [
+        {value: 'времени', label: 'времени'},
+        {value: 'длительностb', label: 'длительности'},
+        {value: 'стоимости', label: 'стоимости'}
+    ]
+
     return (
         <div className="filter-route">
             <div className="route-found">
-                <p className="found-text">найдено</p>
-                <span></span>
+                <p className="found-text">найдено:</p>
+                <span>{trains.length}</span>
             </div>
             <div className="route-sort">
-                <p>сортировать по:
-                    <span className="sort-selected">
-                        времени
-                    </span>
-                </p>
-                <div className="sort none">
-                    <div className='select select-time'>времени</div>
-                    <div className='select select-price'>стоимости</div>
-                    <div className='select select-duration'>длительности</div>
-                </div>
+                <p>сортировать по:</p>
+                <Select className='sort' 
+                options={options}
+                defaultValue={selectedOption}
+                isSearchable={false}
+                onChange={setSelectedOption}
+                classNamePrefix={'sort-selection'}
+                />
             </div>
             <div className='route-show'>
                 <p>показывать по: </p>
-                <span className='sort-selected'>5</span>
-                <span>10</span>
-                <span>20</span>
+                <FilterButton id={5}/>
+                <FilterButton id={10}/>
+                <FilterButton id={20}/>
             </div>
         </div> 
     )

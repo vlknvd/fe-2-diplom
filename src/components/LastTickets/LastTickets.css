@@ -23,6 +23,7 @@
     font-weight: 400;
     font-size: 20px;
     color: #292929;
+    text-transform: capitalize;
 }
 
 .ticket-subtitle {
@@ -40,17 +41,10 @@
     align-items: center;
 }
 
-.ticket-options {
-    width: 92px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 .ticket-option {
     width: 20px;
     height: 20px;
+    margin-right: 20px;
 }
 
 .ticket-option.none {

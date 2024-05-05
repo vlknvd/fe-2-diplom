@@ -13,7 +13,7 @@ const MainPage = () => {
         <>
             <Header />
             <Banner name={'home'} link={'./img/banner.png'}>
-                <SearchForm />
+                <SearchForm name={'main-page'}/>
             </Banner>
             <main className='main'>
                 <About />
