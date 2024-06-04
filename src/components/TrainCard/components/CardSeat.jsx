@@ -1,9 +1,6 @@
-import { useEffect } from "react"
 import Seat from "./Seat"
-import { useNavigate } from "react-router-dom"
 
-const CardSeat = ({ availableSeats, priceDep, priceArr, conditioner, wifi, express, onClick}) => {
-
+const CardSeat = ({ availableSeats, priceDep, priceArr, conditioner, wifi, express, onClick, order }) => {
     return (
         <div className='card-seats'>
             {availableSeats?.fourth && 
@@ -44,7 +41,8 @@ const CardSeat = ({ availableSeats, priceDep, priceArr, conditioner, wifi, expre
                 {express && <img src="./img/train-card/option-2.png" alt="" className="card-option" />}
             </div>
             <div className="card-button">
-                <button className="choice-seat" onClick={onClick}>Выбрать места</button>
+                {order ? <button className="choice-seat order" onClick={onClick}>Изменить</button> : 
+                <button className="choice-seat" onClick={onClick}>Выбрать места</button>}
             </div>
         </div> 
     )

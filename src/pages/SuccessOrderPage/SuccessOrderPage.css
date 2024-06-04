@@ -182,10 +182,12 @@
     margin-right: 19px;
 
     background-image: url(/public/img/success-order/star.png);
+    background-color: transparent;
+    border: none;
     background-repeat: no-repeat;
 }
 
-.star.active {
+.star.check {
     background-image: url(/public/img/success-order/star-active.png);
 }
 

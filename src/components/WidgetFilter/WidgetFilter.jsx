@@ -12,8 +12,8 @@ import RangeSlider from 'react-range-slider-input';
 const WidgetFilter = () => {
     const [calendar, setCalendar] = useState({direction: '', open: false})
     const { fromDate, toDate } = useSelector((state) => state.choice)
-    const dispatch = useDispatch()
-    const item = JSON.parse(localStorage.getItem('trains'))
+    // const dispatch = useDispatch()
+    // const item = JSON.parse(localStorage.getItem('trains'))
 
     const onClick = (e) => {
         setCalendar((prev) => ({ ...prev, direction: e.target.id}))

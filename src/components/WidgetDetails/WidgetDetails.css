@@ -157,6 +157,7 @@
     font-weight: 400;
     font-size: 18px;
     color: #fff;
+    text-transform: capitalize;
 }
 
 .there-direction-from > p, .there-direction-to > p  {

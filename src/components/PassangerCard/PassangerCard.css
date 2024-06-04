@@ -6,6 +6,10 @@
     background: #fff; 
 }
 
+.passanger.hide {
+    display: block;
+}
+
 .passanger-head {
     padding: 42px 40px 32px 23px;
 
@@ -62,14 +66,11 @@
 
     width: 280px;
     height: 50px;
-    padding-left: 10px;
+    /* padding-left: 10px; */
 
     font-weight: 400;
     font-size: 24px;
     color: #292929;
-    
-    border: 1px solid #928F94;
-    border-radius: 5px;
     
     cursor: pointer;
 }
@@ -78,6 +79,7 @@
     content: '';
 
     position: absolute;
+    z-index: 999;
     left: 250px;
 
     width: 12px;
@@ -86,8 +88,33 @@
     background-image: url(/public/img/passangers/select.png);
 }
 
-.select-ages.none {
+.select-ages__control.css-13cymwt-control {
+    width: 280px;
+    height: 50px;
+    padding-left: 10px;
+    border: 1px solid #928F94;
+    border-radius: 5px;
+}
+
+.select-ages__indicators.css-4xgw5l-IndicatorsContainer2 {
     display: none;
+}
+
+.select-ages__control.select-ages__control--is-focused.css-t3ipsp-control {
+    width: 280px;
+    height: 50px;
+    padding-left: 10px;
+    border: 1px solid #928F94;
+    border-radius: 5px;
+}
+
+.select-ages__menu.css-1nmdiq5-menu, .select-ages__option.select-ages__option--is-selected  {
+    color: #000;
+    background: #FFFFFF;
+}
+
+.select-ages__option.select-ages__option--is-focused {
+    background: #FFA800;
 }
 
 .passanger-select-age {
@@ -159,6 +186,7 @@
     text-align: center;
     text-transform: uppercase;
     color: #000;
+    border: none;
 }
 
 .gender-select-color.gender-man {
@@ -179,7 +207,6 @@
     
     font-weight: 400;
     font-size: 18px;
-    color: #c4c4c4;
 }
 
 .passanger-restric-check {
@@ -260,7 +287,6 @@ input[type="checkbox"]:checked + .checkbox-text {
 
 .passanger-docs {
     padding-left: 35px;
-    margin-bottom: 37px; 
 
     display: flex;
     flex-direction: row;
@@ -328,9 +354,8 @@ input[type="checkbox"]:checked + .checkbox-text {
 .passanger-footer-button {
     width: 303px;
     height: 52px;
-    margin-bottom: 33px;
-    margin-left: 626px;
-
+    margin: 33px 0 33px 626px;
+    
     border: 1px solid #292929;
     border-radius: 5px;
     background: #fff;

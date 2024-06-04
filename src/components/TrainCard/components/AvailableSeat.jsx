@@ -1,6 +1,4 @@
 const AvailableSeat = ({ priceDep, priceArr}) => {
-    // console.log(priceDep, priceArr) // массив с верхние: цена
-
     return (
         <div className='seats-up'>
             <div className='seat-amount'>

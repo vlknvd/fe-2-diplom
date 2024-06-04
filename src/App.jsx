@@ -9,7 +9,6 @@ import ValidatePage from './pages/ValidatePage/ValidatePage'
 import SuccessOrderPage from './pages/SuccessOrderPage/SuccessOrderPage'
 
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>

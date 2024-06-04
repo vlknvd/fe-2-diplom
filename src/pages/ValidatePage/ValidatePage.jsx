@@ -9,8 +9,15 @@ import Footer from '../../components/Footer/Footer'
 import TrainCard from '../../components/TrainCard/TrainCard'
 import ValidatePassangers from '../../components/ValidatePassangers/ValidatePassangers'
 import ValidatePayment from '../../components/ValidatePayment/ValidatePayment'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 const ValidatePage = () => {
+    const { train } = useSelector(state => state.trainSeat)
+    const navigate = useNavigate()
+    const onClick = () => {
+        navigate('/success')
+    }
     return (
         <>
         <Header/>
@@ -25,12 +32,12 @@ const ValidatePage = () => {
                     <div className="validate-form-head train">
                         <h3 className="form-title train">Поезд</h3>
                     </div>
-                    <TrainCard />
+                    <TrainCard card={train} key={train.departure?._id} order={'order'} />
                     <ValidatePassangers />
                     <ValidatePayment />
                 </div>
                 <div className="validate-button">
-                    <button>Подтвердить</button>
+                    <button onClick={onClick}>Подтвердить</button>
                 </div>
                 
             </section>

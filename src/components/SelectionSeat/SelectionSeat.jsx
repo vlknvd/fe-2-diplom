@@ -1,67 +1,53 @@
 import { useDispatch, useSelector } from "react-redux"
 import SeatAmount from "./components/SeatAmount"
-import SeatCarriage from "./components/SeatCarriage"
-import SeatCarriageNumber from "./components/SeatCarriageNumber"
-import SeatCarriageType from "./components/SeatCarriageType"
+import SeatCarriage from "./components/SeatCarriage/SeatCarriage"
+import SeatCarriageNumber from "./components/SeatCarriageNumber/SeatCarriageNumber"
+import SeatCarriageType from "./components/SeatCarriageType/SeatCarriageType"
 import SeatHeader from "./components/SeatHeader"
 import SeatTrainName from "./components/SeatTrainName"
 
 import './SelectionSeat.css'
-import { getSeat } from "../../store/getTrainSeatSlice"
+import { getCarriageType, getSeat } from "../../store/getTrainSeatSlice"
+import { useEffect, useState } from "react"
+import SeatAvailable from "./components/SeatAvailable/SeatAvailable"
 
 
 const SelectionSeat = ({ train, route, direction }) => {
-    // const { train } = JSON.parse(localStorage.getItem('train'))
-    const { seat } = useSelector(state => state.trainSeat)
-    const dispatch = useDispatch()
+    const { departure, arrival } = useSelector(state => state.trainSeat.seat)
+    const { type } = useSelector(state => state.trainSeat)
+    const { selectedSeat } = useSelector(state => state.trainSeat)
+    const [carriageNumber, setCarriageNumber] = useState(false)
 
-    console.log()
-    const onClick = () => {
-        direction === 'departure' ?
-        dispatch(getSeat(train.departure._id))
-        : dispatch(getSeat(train.arrival._id))
+    const dispatch = useDispatch()
+    let id = train[direction]._id
+
+    useEffect(() => {
+        dispatch(getSeat({ id, direction }))
+    }, [id, direction, dispatch])
+
+    const onClick = (e) => {
+        const { id } = e.target
+        dispatch(getCarriageType(id))
+        setCarriageNumber(!carriageNumber)
     }
+    
     return (
         <div className={`select-seat ${route}`}>
             <SeatHeader route={route}/>
-            {direction === 'departure' ? 
-            <SeatTrainName 
-            route={route}
-            number = {train.departure?.train.name}
-            cityFrom = {train.departure?.from?.city?.name}
-            cityTo = {train.departure?.to?.city?.name}
-            stationFrom = {train.departure?.from.railway_station_name}
-            stationTo = {train.departure?.to.railway_station_name}
-            depFrom={train.departure?.from.datetime}
-            depTo={train.departure?.to.datetime}
-            duration = {train.departure?.duration}
-            /> : 
-            <SeatTrainName 
-            route={route}
-            number = {train.arrival.train.name}
-            cityFrom = {train.arrival?.from?.city?.name}
-            cityTo = {train.arrival?.to?.city?.name}
-            stationFrom = {train.arrival?.from.railway_station_name}
-            stationTo = {train.arrival?.to.railway_station_name}
-            depFrom={train.arrival?.from.datetime}
-            depTo={train.arrival?.to.datetime}
-            duration = {train.arrival?.duration}
-            /> }
-            <SeatAmount />
-            {direction === 'departure' ? 
-            <SeatCarriageType 
-            seat={train.departure.available_seats_info}
-            onClick={onClick}
-            /> :
-            <SeatCarriageType 
-            seat={train.arrival.available_seats_info}
-            onClick={onClick}
-            />
-            }
-            <SeatCarriageNumber 
-            number = {seat.coach?.name}
-            />
-            <SeatCarriage />
+            <SeatTrainName route={route}
+            number = {train[direction].train.name}
+            cityFrom = {train[direction].from?.city?.name}
+            cityTo = {train[direction].to?.city?.name}
+            stationFrom = {train[direction].from.railway_station_name}
+            stationTo = {train[direction].to.railway_station_name}
+            depFrom={train[direction].from.datetime}
+            depTo={train[direction].to.datetime}
+            duration = {train[direction].duration}/>
+            <SeatAmount direction={direction}/> 
+            <SeatCarriageType seat={train[direction].available_seats_info} onClick={onClick} />
+            {carriageNumber && <SeatCarriageNumber seat = {direction === 'departure' ? departure : arrival } direction={direction} />}
+            {selectedSeat[direction].coach && <SeatCarriage carriage={selectedSeat[direction]} type={type} /> }
+            {selectedSeat[direction].coach && <SeatAvailable carriage={selectedSeat[direction]} type={type} direction={direction}/>}
         </div>
         
     )

@@ -14,9 +14,11 @@ const getFilterSlice = createSlice({
     },
     reducers: {
         addFilterOptions: (state, { payload }) => {
-            state.filterOptions = payload
+            const { id, check } = payload
+            state.filterOptions[id] = !check
         }
     }
+    
 })
 
 export default getFilterSlice.reducer

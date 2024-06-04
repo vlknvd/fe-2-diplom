@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import CardDirection from '../TrainCard/components/CardDirection';
 import CardSeat from '../TrainCard/components/CardSeat';
 import CardTitle from '../TrainCard/components/CardTitle';
@@ -9,10 +8,10 @@ import { getTrain } from '../../store/getTrainSeatSlice';
 import { useNavigate } from 'react-router-dom';
 
 
-const TrainCard = ({ card }) => {
-
+const TrainCard = ({ card, order }) => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    
     const onClick = () => {
         dispatch(getTrain(card))
         navigate('/seat')
@@ -58,6 +57,7 @@ const TrainCard = ({ card }) => {
             wifi={card?.arrival?.have_wifi || card?.departure?.have_wifi }
             express={card?.arrival?.is_express || card?.departure?.is_express}
             onClick = {onClick}
+            order={order}
             />
         </div>
     )

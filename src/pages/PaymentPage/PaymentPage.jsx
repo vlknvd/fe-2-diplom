@@ -6,8 +6,18 @@ import './PaymentPage.css'
 import Footer from '../../components/Footer/Footer'
 import WidgetDetails from '../../components/WidgetDetails/WidgetDetails'
 import PersonalData from '../../components/PersonalData/PersonalData'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 const PaymentPage = () => {
+    const { orderPassanger } = useSelector(state => state.passanger)
+    const { paymentMethod } = useSelector(state => state.passanger)
+    const navigate = useNavigate()
+    const onClick = () => {
+        if(orderPassanger.length > 0 && paymentMethod !== '') {
+            navigate('/validate')
+        }
+    }
     return (
         <>
         <Header/>
@@ -20,7 +30,7 @@ const PaymentPage = () => {
             <section className='section payment'>
                 <PersonalData />
                 <div className="payment-buy">
-                    <button className="buy-button">Купить билеты</button>
+                    <button className="buy-button" onClick={onClick}>Купить билеты</button>
                 </div>
             </section>
         </main>

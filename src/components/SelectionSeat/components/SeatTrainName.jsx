@@ -28,7 +28,6 @@ const SeatTrainName = ({ route, number, cityFrom, cityTo, stationFrom, stationTo
                 <div className='train-desc'>
                     <h5 className='desc-name'>{number}</h5>
                     <p className='desc-city'>{cityFrom}&#8594;</p>
-                    {/* <p className='desc-city'>Адлер&#8594;</p> */}
                     <p className='desc-city'>{cityTo}</p>
                 </div>
             </div>

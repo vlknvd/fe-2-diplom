@@ -225,6 +225,16 @@
     color: #FFA800;
 }
 
+.choice-seat.order {
+    background: transparent;
+    border: 1px solid #292929;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #292929;
+}
+
 .seats-up {
     width: 276px;
     left: 0;

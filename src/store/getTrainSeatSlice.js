@@ -3,10 +3,10 @@ import axios from "axios";
 
 export const getSeat = createAsyncThunk(
     'seat/getSeat',
-    async(id) => {
+    async({ id, direction }) => {
         const response = await axios(`https://students.netoservices.ru/fe-diplom/routes/${id}/seats`)
-        console.log(response.data)
-        return response.data
+        const data = response.data;
+        return { data, direction };
     }
 )
 
@@ -18,21 +18,37 @@ const getTrainSeatSlice = createSlice({
         train: data ? JSON.parse(data) : [],
         loading: false,
         error: null,
-        seat: []
+        seat: {
+            departure: [],
+            arrival: []
+        },
+        selectedSeat: {
+            departure: [],
+            arrival: []
+        },
+        type: []
     },
     reducers: {
         getTrain: (state, { payload }) => {
             state.train = payload;
             localStorage.setItem('train', JSON.stringify(payload))
-        }
+        },
+        getSelectedSeat: (state, { payload }) => {
+            const { el, direction } = payload
+            state.selectedSeat[direction] = el;
+        },
+        getCarriageType: (state, { payload }) => {
+            state.type = payload
+        },
     },
     extraReducers: (builder) => {
         builder.addCase(getSeat.pending, (state) => {
             state.loading =  true;
         }),
-        builder.addCase(getSeat.fulfilled, (state, { payload }) => {
+        builder.addCase(getSeat.fulfilled, (state, { payload } ) => {
+            const { data, direction } = payload;
             state.loading = false;
-            state.seat = payload
+            state.seat[direction] = data;
         }),
         builder.addCase(getSeat.rejected, (state, { error }) => {
             state.loading = false;
@@ -43,4 +59,4 @@ const getTrainSeatSlice = createSlice({
 
 export default getTrainSeatSlice.reducer
 
-export const { getTrain } = getTrainSeatSlice.actions
+export const { getTrain, getSelectedSeat, getCarriageType, getDirection } = getTrainSeatSlice.actions

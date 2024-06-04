@@ -6,11 +6,14 @@ import SelectionSeat from '../../components/SelectionSeat/SelectionSeat'
 import Footer from '../../components/Footer/Footer'
 import WidgetFilter from '../../components/WidgetFilter/WidgetFilter'
 import './SelectionSeatPage.css'
-import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 const SelectionSeatPage = () => {
+    const navigate = useNavigate()
     const train = JSON.parse(localStorage.getItem('train'))
-    console.log(train)
+    const onClick = () => {
+        navigate('/passangers')
+    }
     return (
         <>
             <Header />
@@ -21,12 +24,11 @@ const SelectionSeatPage = () => {
             <main className='main seats'>
                 <WidgetFilter />
                 <section className='section seat'>
-                    <h3 class="seat-title">Выбор мест</h3>
+                    <h3 className="seat-title">Выбор мест</h3>
                     <SelectionSeat route={'to'} direction={'departure'} train={train}/>
                     {train.arrival && <SelectionSeat route={'back'} direction={'arrival'} train={train}/>}
-                    <button className="seat-button">Далее</button>
+                    <button className="seat-button" onClick={onClick}>Далее</button>
                 </section>
-                
             </main>   
             <Footer /> 
         </>

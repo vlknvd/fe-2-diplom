@@ -4,8 +4,10 @@ import choiceSlice from './choiceSlice'
 import subscribeSlice from './subscribeSlice'
 import getTrainsSlice from './getTrainsSlice'
 import getLastRoutes from './getLastRoutes'
-import getWidgetFilterSlice from './getWidgetFilterSlice'
 import getTrainSeatSlice from './getTrainSeatSlice'
+import getFilterSlice from './getFilterSlice'
+import getSeatsSlice from './getSeatsSlice'
+import passangersSlice from './passangersSlice'
 
 
 export const store = configureStore({
@@ -15,7 +17,9 @@ export const store = configureStore({
         subscribe: subscribeSlice,
         trains: getTrainsSlice,
         lastRoutes: getLastRoutes,
-        filter: getWidgetFilterSlice,
-        trainSeat: getTrainSeatSlice
+        filter: getFilterSlice,
+        trainSeat: getTrainSeatSlice,
+        seats: getSeatsSlice,
+        passanger: passangersSlice
     }
 })

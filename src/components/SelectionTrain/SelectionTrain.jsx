@@ -5,9 +5,8 @@ import ChangePages from '../../components/ChangePages/ChangePages'
 import FilterRoute from '../FilterRoute/FilterRoute';
 
 const SelectionTrain = () => {
-    const {loading, error} = useSelector(state => state.trains)
+    const { loading, error } = useSelector(state => state.trains)
     const trains = JSON.parse(localStorage.getItem('trains')) || error
-    const {fromCity, toCity} = useSelector(state => state.choice)
     return (
         <>
         {trains.length > 0 ?

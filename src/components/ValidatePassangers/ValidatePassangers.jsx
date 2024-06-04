@@ -1,63 +1,33 @@
+import { useSelector } from 'react-redux'
 import './ValidatePassangers.css'
+import PassangerCard from './components/PassangerCard'
+import PassangersCards from './components/PassangersCards'
+import { useNavigate } from 'react-router-dom'
+import { selectSelectedSeat } from '../../store/getSeatsSlice'
+import { totalSum } from '../../utils/selectionWagon'
 
 const ValidatePassangers = () => {
+    const { passanger } = useSelector(state => state.passanger)
+    const seatsDep = useSelector(selectSelectedSeat).departure;
+    const seatsArr = useSelector(selectSelectedSeat).arrival;
+    const navigate = useNavigate()
+    const onClick = () => {
+        navigate('/passangers')
+    }
     return (
         <div className="validate-form pass">
             <div className="validate-form-head pass">
                 <h3 className="form-title pass">Пассажиры</h3>
             </div>
             <div className="validate-form-body pass">
-                <div className="form-block-right pass">
-                    <div className="passanger-info">
-                        <div className="age">
-                            <div></div>
-                            <p>Взрослый</p>
-                        </div>
-                        <div className="description">
-                            <p className="name">Мартынюк Иван Иванович</p>
-                            <p className="text">
-                                Пол женский
-                                Дата рождения 17.02.1985
-                                Паспорт РФ 4204 380694
-                            </p>
-                        </div>
-                    </div>
-                    <div className="passanger-info">
-                        <div className="age">
-                            <div></div>
-                            <p>Взрослый</p>
-                        </div>
-                        <div className="description">
-                            <p className="name">Мартынюк Иван Иванович</p>
-                            <p className="text">
-                                Пол женский
-                                Дата рождения 17.02.1985
-                                Паспорт РФ 4204 380694
-                            </p>
-                        </div>
-                    </div>
-                    <div className="passanger-info">
-                        <div className="age">
-                            <div></div>
-                            <p>Взрослый</p>
-                        </div>
-                        <div className="description">
-                            <p className="name">Мартынюк Иван Иванович</p>
-                            <p className="text">
-                                Пол женский
-                                Дата рождения 17.02.1985
-                                Паспорт РФ 4204 380694
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <PassangersCards passangers={passanger} />
                 <div className="form-block-left pass">
                     <div className="result">
                         <p className="result-sum">Всего</p>
-                        <p className="result-number">7 760</p>
+                        <p className="result-number">{totalSum(seatsDep) + totalSum(seatsArr)}</p>
                     </div>
                     <div className="change pass">
-                        <button className="change-button pass">Изменить</button>
+                        <button className="change-button pass" onClick={onClick}>Изменить</button>
                     </div>
                 </div>
             </div>

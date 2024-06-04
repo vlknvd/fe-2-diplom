@@ -21,7 +21,6 @@ const Checkboxes = () => {
     }, [check, dispatch]);
 
     const onClick = (e) => {
-
         const { id } = e.target.id
         setCheck({ ...check, id: !check.id })
     }

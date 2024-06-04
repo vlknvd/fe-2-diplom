@@ -2,8 +2,41 @@ import Header from '../../components/Header/Header'
 import Banner from '../../components/Banner/Banner'
 import Footer from '../../components/Footer/Footer'
 import './SuccessOrderPage.css'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { selectSelectedSeat } from "../../store/getSeatsSlice"
+import { totalSum } from "../../utils/selectionWagon"
 
 const SuccessOrderPage = () => {
+    const { passanger } = useSelector(state => state.passanger)
+    const seatsDep = useSelector(selectSelectedSeat).departure;
+    const seatsArr = useSelector(selectSelectedSeat).arrival;
+    const [ activeStar, setActiveStar ] = useState({
+        one: '',
+        two: '',
+        three: '',
+        four: '',
+        five: ''
+    })
+    const navigate = useNavigate()
+    const onClick = ()=> {
+        navigate('/main')
+    }
+    const onClickStar = (e) => {
+        const { id } = e.target
+        setActiveStar((prevState) => ({
+            ...prevState,
+            [id]: 'check'
+        }))
+        if(activeStar[id] === 'check') {
+            setActiveStar((prevState) => ({
+                ...prevState,
+                [id]: ''
+            }))
+        }
+    }
+    console.log()
     return (
         <>
             <Header/>
@@ -16,7 +49,7 @@ const SuccessOrderPage = () => {
                             <p>№Заказа 285АА</p>
                             <div className="head-sum">
                                 <p className="head-text">сумма</p>
-                                <p className="head-number">7 760</p>
+                                <p className="head-number">{totalSum(seatsDep) + totalSum(seatsArr)}</p>
                             </div>
                         </div>
                         <div className="content-information">
@@ -34,7 +67,7 @@ const SuccessOrderPage = () => {
                             </div>
                         </div>
                         <div className="content-status">
-                            <h3>Ирина Артуровна!</h3>
+                            <h3>{passanger[0].name} {passanger[0].surname}</h3>
                             <p className='status-text'>Ваш заказ успешно оформлен.</p>
                             <p className='status-text'>В ближайшее время с вами свяжется наш оператор для подтверждения.</p>
                             <p className='status-text strong'>
@@ -45,15 +78,15 @@ const SuccessOrderPage = () => {
                             <div className="rating">
                                 <p>Оцените заказ</p>
                                 <div className="rating-stars">
-                                    <div className="star"></div>
-                                    <div className="star"></div>
-                                    <div className="star"></div>
-                                    <div className="star"></div>
-                                    <div className="star"></div>
+                                    <button className={`star ${activeStar.one}`} id='one' onClick={onClickStar} ></button>
+                                    <button className={`star ${activeStar.two}`}  id='two' onClick={onClickStar}></button>
+                                    <button className={`star ${activeStar.three}`} id='three' onClick={onClickStar}></button>
+                                    <button className={`star ${activeStar.four}`} id='four' onClick={onClickStar}></button>
+                                    <button className={`star ${activeStar.five}`} id='five'onClick={onClickStar}></button>
                                 </div>
                             </div>
                             <div className="return">
-                                <button className="return-button">Вернуться на главную</button>
+                                <button className="return-button" onClick={onClick}>Вернуться на главную</button>
                             </div>
                         </div>
                     </div>

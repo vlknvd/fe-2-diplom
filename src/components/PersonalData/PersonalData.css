@@ -32,15 +32,17 @@
     margin-bottom: 54px;
 }
 
-.surname, .name, .patr {
+.surname, .name, .father {
     margin-bottom: 12px;
 
     font-weight: 400;
     font-size: 16px;
     color: #292929;
+
+    text-transform: capitalize;
 }
 
-.surname-input, .name-input, .patr-input {
+.surname-input, .name-input, .father-input {
     width: 280px;
     height: 50px;
     padding-left: 15px;
